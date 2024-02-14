@@ -15,7 +15,7 @@ function App() {
   const setVal = () => {
     let cmd = instruction.split(" ");
     history.push(instruction)
-     if (cmd[0] == "PLACE") {
+    if (cmd[0] == "PLACE") {
       let pos = cmd[1].split(',')
       setX(parseInt(pos[0]))
       setY(parseInt(pos[1]))
@@ -56,7 +56,7 @@ function App() {
     if (direction == "LEFT") {
       if (cmd[0] == "MOVE") {
         if (rotate % 360 == 180 || rotate % 360 == -180) {
-          if (y < 4  && y!=0)
+          if (y < 4)
             setY(y + 1)
         }
         if (rotate % 360 == 0 || rotate % 360 == -0) {
@@ -68,22 +68,22 @@ function App() {
             setX(x - 1)
         }
         if (rotate % 360 == 90 || rotate % 360 == -90) {
-          if (x < 4  )
+          if (x < 4)
             setX(x + 1)
         }
       }
     }
     if (cmd[0] == "REPORT") {
-      console.log("dir:", result)
+      // console.log("dir:", result)
 
-      if (rotate%360 == 180 || rotate%360 == -180) setResult(x + ',' + y + ',' + "NORTH")
-      if (rotate%360 == 0 || rotate%360 == -0) setResult(x + ',' + y + ',' + "SOUTH")
-      if (rotate%360 == 270 || rotate%360 == -270) setResult(x + ',' + y + ',' + "EAST")
-      if (rotate%360 == 90 || rotate%360 == -90) setResult(x + ',' + y + ',' + "WEST")
+      if (rotate % 360 == 180 || rotate % 360 == -180) setResult(x + ',' + y + ',' + "NORTH")
+      if (rotate % 360 == 0 || rotate % 360 == -0) setResult(x + ',' + y + ',' + "SOUTH")
+      if (rotate % 360 == 270 || rotate % 360 == -270) setResult(x + ',' + y + ',' + "EAST")
+      if (rotate % 360 == 90 || rotate % 360 == -90) setResult(x + ',' + y + ',' + "WEST")
     }
-    console.log("X,Y:", x, y);
-    console.log("direction:", direction, cmd)
-    console.log("rotate:", rotate % 360);
+    // console.log("X,Y:", x, y);
+    // console.log("direction:", direction, cmd)
+    // console.log("rotate:", rotate % 360);
   }
   const reSetVal = () => {
     setX(0)
@@ -99,7 +99,7 @@ function App() {
       <div style={{ margin: "10px 10px 10px 10px", backgroundColor: "#77ba94", width: '338px' }}>
         <input type="text" value={instruction} onChange={(e) => { setInstruction(e.target.value) }} />
         <div>
-          <button onClick={setVal} style={{marginLeft:'20px'}}>Run</button>
+          <button onClick={setVal} style={{ marginLeft: '20px' }}>Run</button>
           <button onClick={reSetVal} style={{ margin: '10px 0px 10px 40px' }}> Reset</button>
           <p style={{ fontSize: '18px', paddingLeft: "100px", backgroundColor: "#52649c", color: "white" }}>Result:{result} </p>
         </div>
