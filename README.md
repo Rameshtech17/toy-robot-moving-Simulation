@@ -14,6 +14,32 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+Enter the commands
+Example 1:
+PLACE 0,0,NORTH
+MOVE
+REPORT
+Output: 0,1,NORTH
+
+![image](https://github.com/Rameshtech17/toy-robot-moving-Simulation/assets/55201891/1d0ed1d7-b1fb-47a8-b0ca-ab2c4cdbb44f)
+
+Example 2:
+PLACE 0,0,NORTH
+LEFT
+REPORT
+Output: 0,0,WEST
+
+![image](https://github.com/Rameshtech17/toy-robot-moving-Simulation/assets/55201891/85116e20-ce5a-4b09-862b-e6bac30efc41)
+
+Example 3:
+PLACE 2,3,SOUTH
+RIGHT
+MOVE
+REPORT
+Output:1,3,WEST
+
+![image](https://github.com/Rameshtech17/toy-robot-moving-Simulation/assets/55201891/b5c4337e-b013-434b-a585-d743ddc8bb81)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
