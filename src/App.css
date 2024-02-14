@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  background-color: lightgrey;
+  color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 100%;
+}
+
+.wrapper {
+  width: 335px;
+  height: 335px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(5, 65px);
+  grid-template-rows: repeat(5, 65px);
+  grid-auto-flow: column;
+  margin-left: 2px;
+}
+
+.mouth {
+  position: absolute;
+  background-color: #4f2103;
+  width: 28px;
+  height: 8px;
+  border-radius: 7px 7px 100px 100px;
+  top: 25px;
+  left: 6px;
+}
+
+.eye-section {
+    
+  width: 40x;
+  height: 10px;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.left-eye, .right-eye {
+  background-color: #4f2103;
+  width: 5.2px;
+  height: 8px;
+  border-radius: 50px;
+  position: absolute;
+  top: 1px;
+}
+
+.right-eye {
+  right: 18px;
+}
+
+.left-eye::before, .right-eye::before {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 2px;
+  height: 4px;
+  border-radius: 100px;
+  position: absolute;
+  top: 3px;
+  left: 1px
+}
